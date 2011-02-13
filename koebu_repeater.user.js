@@ -30,7 +30,7 @@
 
         this.playing = false;
         this.refresh();
-        if($('#users-repeat').val()) this.play();
+        if($('#users-repeat').attr('checked')) this.play();
         return this;
     }
     location.href = "javascript:void(Koebu.Unit.prototype.stop=" + repeat + ")()";
