@@ -7,14 +7,20 @@
 
 
 (function(){
+
+
     var check_element = document.createElement('input');
     check_element.setAttribute("type", "checkbox");
     check_element.setAttribute("id", "users-repeat");
-    check_element.setAttribute("style", "float: right; width:100px; margin: 6px 0 0 0;");
+    check_element.setAttribute("style", "margin: 0 2px 0;");
 
-    check_element.appendChild(document.createTextNode('repeat'));
+    var repeat_p = document.createElement('p');
+    repeat_p.setAttribute("style", "float: right; width:70px; margin: 6px 0 0 0;");
+    repeat_p.appendChild(check_element);
+    repeat_p.appendChild(document.createTextNode('repeat'));
+
     var elements = document.getElementsByClassName('unitKoeMain');
-    if(elements) elements[0].appendChild(check_element);
+    if(elements) elements[0].appendChild(repeat_p);
 
     var repeat = function(){
         var container = this.container;
